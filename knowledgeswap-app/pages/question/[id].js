@@ -174,9 +174,8 @@ async function checkIFAwardedAlready(_questionID){
     // router.reload()
 }
     catch(err){console.log(err)}
-    }, 1000)
     setAwardedAlready(true)
-    toast.success(`Succesfully Awarded!`);   
+    }, 1000)
   }
 
   return (

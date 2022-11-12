@@ -180,6 +180,9 @@ async function awardCredibility(_userToBeRewarded){
   )
   KScredibility = await KScredibilityContract.mint(_userToBeRewarded, 1);
   }catch(err){}
+
+  toast.success(`Succesfully Awarded!`);   
+
 }
 
 
