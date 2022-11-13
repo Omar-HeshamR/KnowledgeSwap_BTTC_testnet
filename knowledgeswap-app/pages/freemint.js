@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
 import styled from 'styled-components'
-import Particle from '../Components/Particle'
+import Particle from '../components/Particle.js'
 import {ethers, BigNumber} from "ethers";
 import KStokenabi from "../contracts/KStoken.json"
 import { toast } from "react-hot-toast";

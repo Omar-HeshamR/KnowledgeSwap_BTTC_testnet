@@ -9,7 +9,7 @@ import SearchIcon from '../assets/SearchIcon.png'
 
 const KSquestionNFTContractAddress = "0x83Ddf98A3C8082874a36B2cd28dC0b1B8991deBb"
 
-const myquestions = () => {
+const Myquestions = () => {
 
     const SearchRef = useRef()
     const router = useRouter()
@@ -89,7 +89,7 @@ const myquestions = () => {
         <QuestionContainer>
   
         {[...questions].reverse()?.map((question) => 
-          <QuestionDiv>
+          <QuestionDiv key={question.id}>
           <QuestionBox>
             <MinorContainer><SubHeading>Question:</SubHeading><ViewContainer><ViewButton onClick={() => ViewQuestion(question)}>View</ViewButton></ViewContainer></MinorContainer>
             <Inquiry>{String(question[2])}</Inquiry>
@@ -273,4 +273,4 @@ const myquestions = () => {
   color: #FF0000;
   `
 
-export default myquestions
+export default Myquestions

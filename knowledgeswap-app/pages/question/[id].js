@@ -198,7 +198,7 @@ async function checkIFAwardedAlready(_questionID){
       {questionReplies.length === 0 ? <Heading>No Answers yet !</Heading> : <></>}
 
       {questionReplies?.map((reply) => 
-          <ReplyContainer>
+          <ReplyContainer key={reply.id}>
               <ReplyContainerHeader>
                   <ReplyHeaderItem>Replier: {String(reply[2])}</ReplyHeaderItem>
 

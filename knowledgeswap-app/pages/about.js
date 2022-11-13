@@ -2,7 +2,7 @@ import React from 'react'
 import styled, {keyframes} from 'styled-components';
 import Particle from "../components/Particle"
 
-const about = () => {
+const About = () => {
   return (
     <Section>
       <Particle />
@@ -11,7 +11,7 @@ const about = () => {
         <ObjectivesContainer> <Header>Our Objectives</Header>
         <Objectives><p><b>Spreading Education: </b>We aim to spread education across every subject, allowing users to share and receive information endlessly on a decentralized platform. Our goal is to have a thriving community across every significant education subject.</p> </Objectives>
         <Objectives><p><b>Rewarding Teachers: </b>We thrive on rewarding teachers by incentivizing them to share vital information across our platform. We believe this separates KnowledgeSwap from the rest and gives us our cutting-edge.</p></Objectives>
-        <Objectives><p><b>Insuring the Self-Sustaining Decentralized Model: </b>Whether we would like to admit it or not, today's world is built against those who want to learn. Whether it is high subscription costs to service, rejection from an institution of higher education, or lack of adequate resources for meaningful comprehension, education is getting increasingly centralized every day. Whenever there is an opportunity to attain knowledge, centralized, overarching institutions slam the doors shut. And the ones that do information steal data from users, as was seen by certain centralized platforms sharing student information with academic faculties. This unwelcome status quo was the catalyst for establishing KnowledgeSwap so that an environment where users have the full right to their data and their received information is formed. As the world is progressing with respect to the rights of individuals at an unprecedented rate, now is the time to dismantle any association between users and data. In addition, the implementation of KnowledgeSwap Token allows users to have a full say within the community. As the future of education, KnowledgeSwap is the next-level platform; join it to attain new information and own your right to it forever.</p></Objectives>
+        <Objectives><p><b>Insuring the Self-Sustaining Decentralized Model: </b>Whether we would like to admit it or not, today&apos;s world is built against those who want to learn. Whether it is high subscription costs to service, rejection from an institution of higher education, or lack of adequate resources for meaningful comprehension, education is getting increasingly centralized every day. Whenever there is an opportunity to attain knowledge, centralized, overarching institutions slam the doors shut. And the ones that do information steal data from users, as was seen by certain centralized platforms sharing student information with academic faculties. This unwelcome status quo was the catalyst for establishing KnowledgeSwap so that an environment where users have the full right to their data and their received information is formed. As the world is progressing with respect to the rights of individuals at an unprecedented rate, now is the time to dismantle any association between users and data. In addition, the implementation of KnowledgeSwap Token allows users to have a full say within the community. As the future of education, KnowledgeSwap is the next-level platform; join it to attain new information and own your right to it forever.</p></Objectives>
         </ObjectivesContainer>
 
         <ObjectivesContainer> <Header>Our Committments</Header>
@@ -136,4 +136,4 @@ const Objectives = styled.div`
   height: auto;
 `
 
-export default about
+export default About

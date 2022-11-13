@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router'
 import ExchangeIcon from '../assets/ExchangeIcon.svg'
-import Particle from '../Components/Particle';
+import Particle from '../components/Particle.js';
 
 const MainSection1 = () => {
 

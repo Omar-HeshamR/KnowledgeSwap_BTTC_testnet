@@ -1,4 +1,4 @@
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import styled from "styled-components"
 import { createGlobalStyle } from 'styled-components'
 import "@fontsource/red-hat-display"

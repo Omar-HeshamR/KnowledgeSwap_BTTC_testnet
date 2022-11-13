@@ -9,7 +9,7 @@ import SearchIcon from '../assets/SearchIcon.png'
 
 const KSquestionNFTContractAddress = "0x83Ddf98A3C8082874a36B2cd28dC0b1B8991deBb"
 
-const learn = () => {
+const Learn = () => {
   
   const SearchRef = useRef()
   const router = useRouter()
@@ -90,7 +90,7 @@ const learn = () => {
       {userKStokenCount >= 1500 ?
       <QuestionContainer>
       {[...questions].reverse()?.map((question) => 
-        <QuestionDiv>
+        <QuestionDiv key={question.id}>
         <QuestionBox>
           <MinorContainer><SubHeading>Question:</SubHeading><ViewContainer><ViewButton onClick={() => ViewQuestion(question)}>View</ViewButton></ViewContainer></MinorContainer>
           <Inquiry>{String(question[2])}</Inquiry>
@@ -290,4 +290,4 @@ const Marginer = styled.div`
   margin-bottom: 3vw;
 `
 
-export default learn
+export default Learn

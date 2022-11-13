@@ -97,7 +97,7 @@ const Solve = () => {
 
       <QuestionContainer>
         {[...questions].reverse()?.map((question) => 
-                <QuestionDiv>
+                <QuestionDiv key={question.id}>
                 <QuestionBox>
                   <MinorContainer>
                     <SubHeading>Question:</SubHeading>
