@@ -7,7 +7,7 @@ import { toast } from "react-hot-toast";
 import { useRouter } from 'next/router'
 import { useStateContext } from '../context/StateContext';
 
-const KStokenContractAddress = "0x6BB963Aa95af719a697adAf35966AC7Ef4c397bc"
+const KStokenContractAddress = "0xa918f9581f2d56224152DD7A26dd4A62E5b74D66"
 
 const FreeMint = () => {
     const { accounts } = useStateContext();

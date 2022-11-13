@@ -8,9 +8,9 @@ import KnowledgeSwapCredibilityToken from "../contracts/KnowledgeSwapCredibility
 import { useRouter } from 'next/router'
 const keccak256 = require('keccak256')
 
-const KStokenContractAddress = "0x6BB963Aa95af719a697adAf35966AC7Ef4c397bc"
-const KScredibilityContractAddress = "0x9c6d329a4ae8790DFCf96AA041A4AA0bf9F402dF"
-const KSquestionNFTContractAddress = "0x5E5f07408Bb499F2097EEca87321fDb764e0E205"
+const KStokenContractAddress = "0xa918f9581f2d56224152DD7A26dd4A62E5b74D66"
+const KScredibilityContractAddress = "0xEa7e336E929eb9D2B992B2531e4f94c5FB7A9259"
+const KSquestionNFTContractAddress = "0xb31db8a34Faa173df8Bc62e103827AFB00045FDF"
 const ERC20ABI = ERC20abi
 
 const Context = createContext();

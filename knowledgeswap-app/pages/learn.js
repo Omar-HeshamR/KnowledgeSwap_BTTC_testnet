@@ -7,7 +7,7 @@ import {ethers, BigNumber} from "ethers";
 import { useRouter } from 'next/router'
 import SearchIcon from '../assets/SearchIcon.png'
 
-const KSquestionNFTContractAddress = "0x5E5f07408Bb499F2097EEca87321fDb764e0E205"
+const KSquestionNFTContractAddress = "0xb31db8a34Faa173df8Bc62e103827AFB00045FDF"
 
 const Learn = () => {
   

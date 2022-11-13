@@ -9,8 +9,8 @@ import {ethers, BigNumber} from "ethers";
 import { useRouter } from 'next/router'
 import KSquestionABI from "../../contracts/KSquestionNFT.json"
 
-const KSanswerNFTContractAddress = "0x51ee4CC19f64B719a0429aADAA0648D9F72Fdf89"
-const KSquestionNFTContractAddress = "0x5E5f07408Bb499F2097EEca87321fDb764e0E205"
+const KSanswerNFTContractAddress = "0xB471c5fc4d130080C862686D5bE692822e713D9a"
+const KSquestionNFTContractAddress = "0xb31db8a34Faa173df8Bc62e103827AFB00045FDF"
 
 const AsnweringDetails = () => {
 
