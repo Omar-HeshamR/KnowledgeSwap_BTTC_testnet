@@ -41,6 +41,15 @@ contract KSquestionNFT is ERC721, Ownable {
         return questions;
     }
 
+    function getQuestionID(string memory _creator, string memory _question) public view returns (uint256) {
+        string memory Stringfier = "";
+        Stringfier = string(bytes.concat(bytes(Stringfier), bytes(_creator), bytes(_question)));
+        uint256 randomNum = uint256(
+        keccak256(abi.encodePacked(Stringfier))
+        );
+        return randomNum % 10**16;
+    }
+
     // To Make DNA, Hashing asker and question
     function _createRandomNum(string memory _creator, string memory _question) internal view returns (uint256) {
         string memory Stringfier = "";

@@ -10,7 +10,7 @@ const keccak256 = require('keccak256')
 
 const KStokenContractAddress = "0x6BB963Aa95af719a697adAf35966AC7Ef4c397bc"
 const KScredibilityContractAddress = "0x9c6d329a4ae8790DFCf96AA041A4AA0bf9F402dF"
-const KSquestionNFTContractAddress = "0x83Ddf98A3C8082874a36B2cd28dC0b1B8991deBb"
+const KSquestionNFTContractAddress = "0x5E5f07408Bb499F2097EEca87321fDb764e0E205"
 const ERC20ABI = ERC20abi
 
 const Context = createContext();
@@ -146,11 +146,11 @@ async function HoldBounty(_questionID, _bountyAmount){
     signer
   )
   const response = await KStokensContract.holdBounty(_questionID, _bountyAmount);
-              
-  toast.success(`Succesfully Asked The Question!`);   
-  router.push("./");
+  toast.success("Successfully Asked The Question!")
+  // router.reload();
+  router.push("/")
 
-  }catch(err){}
+  }catch(err){console.log(err)}
   // console.log(response)
 }
 

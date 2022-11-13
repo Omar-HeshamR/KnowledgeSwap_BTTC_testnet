@@ -12,7 +12,7 @@ import { useRouter } from 'next/router'
 
 const KStokenContractAddress = "0x6BB963Aa95af719a697adAf35966AC7Ef4c397bc"
 const KSanswerNFTContractAddress = "0x51ee4CC19f64B719a0429aADAA0648D9F72Fdf89"
-const KSquestionNFTContractAddress = "0x83Ddf98A3C8082874a36B2cd28dC0b1B8991deBb"
+const KSquestionNFTContractAddress = "0x5E5f07408Bb499F2097EEca87321fDb764e0E205"
 
 const QuestionDetails = () => {
 

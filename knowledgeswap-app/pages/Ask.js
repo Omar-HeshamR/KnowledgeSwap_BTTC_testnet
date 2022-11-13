@@ -7,7 +7,7 @@ import KSquestionABI from "../contracts/KSquestionNFT.json"
 import Logo from '../assets/KnowledgeSwapLogo.png'
 import {ethers, BigNumber} from "ethers";
 
-const KSquestionNFTContractAddress = "0x83Ddf98A3C8082874a36B2cd28dC0b1B8991deBb"
+const KSquestionNFTContractAddress = "0x5E5f07408Bb499F2097EEca87321fDb764e0E205"
 
 const Ask = () => {
 
@@ -16,6 +16,7 @@ const Ask = () => {
   const router = useRouter()
   const { accounts, userKStokenCount, onLoad, HoldBounty , Test} = useStateContext();
   const [loading, setLoading] = useState(false);
+  const [checker, setChecker] = useState();
   
   useEffect(() => {
       onLoad()
@@ -42,37 +43,61 @@ const Ask = () => {
           // console.log("Question: ", QuestionRef.current.value)
           // console.log("Bounty: ", BountyRef.current.value)
           // console.log("timeStamp: ", timeStamp)
+
+          // get the question ID
+          const myQuestionID = await contract.getQuestionID(accounts[0],QuestionRef.current.value) 
+
           setLoading(true)
+
           // Mint the question
+          try{
           const response = await contract.AskMyQuestion(accounts[0],QuestionRef.current.value,
           BountyRef.current.value, String(timeStamp));
-          
-          // Hold the bounty
-          let response2;
-          response2 = await contract.getAllQuestions() // later will be made more secure and efftionatly by fetching the specfic ID
+          HoldBounty(String(parseInt(myQuestionID)),String(parseInt(BountyRef.current.value)))
 
-          setTimeout(async function () {
+          // setChecker(response);
+          // while(checker == undefined){}
+
+          // console.log(response)
+        }catch(err){
+            toast.error("Cancelled!")
+            router.push("/");
+          }
+
+          // setTimeout(async function () {
+          //   setChecker(undefined)
+          //   console.log(checker)
+          //   }, 3000)
+
+          // let i = 0;
+          // while(checker === undefined){
+          //   console.log("mistake")
+          //   if(i >= 1000){router.push("/about")}
+          //   i++;
+          // }
+          // OLD METHOD
+          // setTimeout(async function () {
             // console.log(String(response2[response2.length-1][1]))
             // console.log(String(response2[response2.length-1][2]))
             // console.log(accounts[0])
             // console.log(String(QuestionRef.current.value))
             // console.log(String(response2[response2.length-1][1]) !== String(accounts[0]))
             // console.log(String(response2[response2.length-1][2]) !== String(QuestionRef.current.value))
-            while(String(response2[response2.length-1][1]) != accounts[0] ||
-              String(response2[response2.length-1][2]) != QuestionRef.current.value ){
-               response2 = await contract.getAllQuestions()
-                if(String(response2[response2.length-1][1]) === String(accounts[0]) &&
-                String(response2[response2.length-1][2]) === String(QuestionRef.current.value) ){
-                  console.log("OUT")
-                  break;
-                }
-                console.log("still fetching...")
-              }
-              setTimeout(function(){
-                HoldBounty(parseInt(response2[response2.length -1][0]),parseInt(BountyRef.current.value))
-              }, 1500)    
-          // setLoading(false)
-            }, 2000)
+          //   while(String(response2[response2.length-1][1]) != accounts[0] ||
+          //     String(response2[response2.length-1][2]) != QuestionRef.current.value ){
+          //      response2 = await contract.getAllQuestions()
+          //       if(String(response2[response2.length-1][1]) === String(accounts[0]) &&
+          //       String(response2[response2.length-1][2]) === String(QuestionRef.current.value) ){
+          //         console.log("OUT")
+          //         break;
+          //       }
+          //       console.log("still fetching...")
+          //     }
+          //     setTimeout(function(){
+          //       HoldBounty(parseInt(response2[response2.length -1][0]),parseInt(BountyRef.current.value))
+          //     }, 1500)    
+          // // setLoading(false)
+          //   }, 2000)
 
         }catch (err) {
               toast.error('Error Occured ', err);
@@ -97,7 +122,7 @@ const Ask = () => {
               <InputText>Bounty: </InputText>
                 <Input  type={"number"} ref={BountyRef} defaultValue="1"/>
               </InputContainer>
-              {loading ? <PleaseWait>Loading... Please wait ~ 30 seconeds</PleaseWait>:  
+              {loading ? <PleaseWait>Signing Transaction... </PleaseWait>:  
               <MintButton onClick={handleMint} >Submit Question !</MintButton>}
           </> 
         : <><Heading2>Must Hold a minimum of 300 Tokens To Ask Questions!</Heading2>

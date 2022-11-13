@@ -8,7 +8,7 @@ import Logo from '../assets/KnowledgeSwapLogo.png'
 import KSquestionABI from "../contracts/KSquestionNFT.json"
 import {ethers, BigNumber} from "ethers";
 
-const KSquestionNFTContractAddress = "0x83Ddf98A3C8082874a36B2cd28dC0b1B8991deBb"
+const KSquestionNFTContractAddress = "0x5E5f07408Bb499F2097EEca87321fDb764e0E205"
 
 const Solve = () => {
 
@@ -197,7 +197,7 @@ const QuestionDiv = styled.div`
 margin: 1vw 0;
 width: 95%;
 min-height: 18vw;
-height: auto;
+height: 100%;
 display: flex;
 // flex-direction: column;
 // background-color: purple;
@@ -264,6 +264,10 @@ width: 100%;
 height: 100%;
 max-height: 30vw;
 overflow-y: scroll;
+overflow-x: none;
+white-space: initial; 
+flex-wrap: wrap;
+word-wrap: break-word;
 margin-top: 1vw;
 margin-bottom: auto;
 display: flex;
@@ -274,7 +278,7 @@ text-align: left;
 color: #FF0000;
 
 &::-webkit-scrollbar {
-  width: 1vw;
+  width: 0.1vw;
 }
 
 &::-webkit-scrollbar-thumb {
