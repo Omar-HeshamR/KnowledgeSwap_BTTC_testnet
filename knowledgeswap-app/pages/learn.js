@@ -87,7 +87,7 @@ const Learn = () => {
 
       {accounts[0] ? <>
 
-      {userKStokenCount >= 1500 ?
+      {userKStokenCount >= 1000 ?
       <QuestionContainer>
       {[...questions].reverse()?.map((question) => 
         <QuestionDiv key={question.id}>
