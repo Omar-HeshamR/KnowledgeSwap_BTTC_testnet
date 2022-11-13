@@ -9,7 +9,7 @@ import {ethers, BigNumber} from "ethers";
 import { useRouter } from 'next/router'
 import KSquestionABI from "../../contracts/KSquestionNFT.json"
 
-const KSanswerNFTContractAddress = "0xB471c5fc4d130080C862686D5bE692822e713D9a"
+const KSanswerNFTContractAddress = "0xf27DEcD2065C30588197b68A5Bf02c785832829F"
 const KSquestionNFTContractAddress = "0xb31db8a34Faa173df8Bc62e103827AFB00045FDF"
 
 const AsnweringDetails = () => {
@@ -33,7 +33,7 @@ const AsnweringDetails = () => {
         const response = await contract.answerTheQuestion(parseInt(parseFloat(String(questionToBeAnswered[0]))), accounts[0],String(AsnwerRef.current.value));
         router.push("/Solve");
         toast.success("Thank you for answering the question! Best gets rewarded!",   {
-            duration: 9000,
+            duration: 3000,
           });
     }catch(err){
         toast.error('Error Occured ', err);

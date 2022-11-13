@@ -11,7 +11,7 @@ import CredibilityIcon from '../../assets/CredibilityIcon.png'
 import { useRouter } from 'next/router'
 
 const KStokenContractAddress = "0xa918f9581f2d56224152DD7A26dd4A62E5b74D66"
-const KSanswerNFTContractAddress = "0xB471c5fc4d130080C862686D5bE692822e713D9a"
+const KSanswerNFTContractAddress = "0xf27DEcD2065C30588197b68A5Bf02c785832829F"
 const KSquestionNFTContractAddress = "0xb31db8a34Faa173df8Bc62e103827AFB00045FDF"
 
 const QuestionDetails = () => {
